@@ -9,6 +9,18 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return {"message": "Hello World!"}
+    # return {'anger': 0.029103195,
+    #                          'disgust': 0.0067921067,
+    #                          'fear': 0.027528232,
+    #                          'joy': 0.876574,
+    #                          'sadness': 0.06151191}
+
+    # return {'anger': None,
+    #                          'disgust': None,
+    #                          'fear': None,
+    #                          'joy': None,
+    #                          'sadness': None}
+
 
 
 @app.route("/emotionDetector")

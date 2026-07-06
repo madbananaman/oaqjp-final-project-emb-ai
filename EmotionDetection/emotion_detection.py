@@ -29,11 +29,23 @@ def emotion_detector(text_to_analyze: str):
     except Exception as e:
         print(e)
 
-        return res.text
+        if res.status_code == 400:
+            return {
+                'anger': None,
+                'disgust': None,
+                'fear': None,
+                'joy': None,
+                'sadness': None
+            }
+
+        
 
 
 if __name__ == "__main__":
 
-    text = "I love this new technology."
+    # text = "I love this new technology."
+    # text = "I think I am having fun"
+
+    text = None
     ic(emotion_detector(text))
 
