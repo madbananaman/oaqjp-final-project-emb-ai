@@ -20,7 +20,7 @@ def emotion_detector():
 
     try:
         response = emotion_detector(query)
-        return response
+        return (response, 200)
     except Exception as e:
         return ({"message": f"Error - {str(e)}"}, 500)
 

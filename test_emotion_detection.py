@@ -12,9 +12,6 @@ class TestEmotionDetection(unittest.TestCase):
         max_result_anger = max(result_anger, key=result_anger.get)
         self.assertEqual(max_result_anger, "anger")
 
-        
-
-
         # Statement	| Dominant Emotion
         #   - I am glad this happened	joy
         result_joy = emotion_detector('I am glad this happened') 
