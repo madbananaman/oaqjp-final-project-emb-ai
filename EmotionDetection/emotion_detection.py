@@ -21,9 +21,12 @@ def emotion_detector(text_to_analyze: str):
     try:
         res.raise_for_status()
         
-
         # return res.json()
         modified_res = res.json().get("emotionPredictions")[0].get("emotion")
+
+        dominant_emotion = max(modified_res, key=modified_res.get)
+        modified_res["dominant_emotion"] = dominant_emotion
+
         return modified_res
 
     except Exception as e:
